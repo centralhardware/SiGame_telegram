@@ -14,6 +14,6 @@ FROM openjdk:16-alpine
 RUN apk update && \
     apk add --no-cache tzdata
 
-COPY --from=maven target/StudyRussian-jar-with-dependencies.jar .
+COPY --from=maven target/SiGame-telegram-jar-with-dependencies.jar .
 
-CMD ["java", "-jar", "StudyRussian-jar-with-dependencies.jar" ]
+CMD ["java", "-jar", "SiGame-telegram-jar-with-dependencies.jar" ]
