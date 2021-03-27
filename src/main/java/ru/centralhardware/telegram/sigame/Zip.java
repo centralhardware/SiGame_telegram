@@ -1,74 +1,74 @@
 package ru.centralhardware.telegram.sigame;
 
-import org.apache.commons.codec.binary.StringUtils;
+import org.apache.commons.compress.archivers.ArchiveEntry;
+import org.apache.commons.compress.archivers.zip.ZipArchiveInputStream;
 
 import java.io.*;
-import java.nio.ByteBuffer;
-import java.nio.charset.Charset;
+import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
 
 public class Zip {
 
     private static final String OUTPUT_DIR = "./packs/";
-    private final File file;
+    private final File zip;
+    private final File unzipFolder;
 
-    public Zip(File file){
-        this.file = file;
+    public Zip(File zip){
+        this.zip = zip;
+        unzipFolder = new File(OUTPUT_DIR + zip.getName());
+        deleteDirectory(unzipFolder);
     }
 
-    public void unzip() throws IOException {
-        File destDir = new File(OUTPUT_DIR + file.getName());
-        byte[] buffer = new byte[1024];
-        ZipInputStream zis = new ZipInputStream(new FileInputStream(file.getPath()));
-        ZipEntry zipEntry = zis.getNextEntry();
-        while (zipEntry != null) {
-            File newFile = newFile(destDir, zipEntry);
-            if (zipEntry.isDirectory()) {
-                if (!newFile.isDirectory() && !newFile.mkdirs()) {
-                    throw new IOException("Failed to create directory " + newFile);
-                }
-            } else {
-                // fix for Windows-created archives
-                File parent = newFile.getParentFile();
-                if (!parent.isDirectory() && !parent.mkdirs()) {
-                    throw new IOException("Failed to create directory " + parent);
-                }
+    public File getUnzipFolder() {
+        return unzipFolder;
+    }
 
-                FileOutputStream fos = new FileOutputStream(newFile);
-                int len;
-                while ((len = zis.read(buffer)) > 0) {
-                    fos.write(buffer, 0, len);
+    public File unzip() throws IOException {
+        FileOutputStream fos;
+        try (
+                FileInputStream fis = new FileInputStream(zip);
+                ZipArchiveInputStream zis = new ZipArchiveInputStream(fis);
+        ){
+            byte[] buffer = new byte[8192];
+            ArchiveEntry entry;
+            while ((entry = zis.getNextEntry()) != null) {
+                File file = new File(unzipFolder, getInWrightEncoding(entry.getName()));
+                if (entry.isDirectory()) {
+                    file.mkdirs();
+                } else {
+                    file.getParentFile().mkdirs();
+                    fos = new FileOutputStream(file);
+                    int read;
+                    while ((read = zis.read(buffer,0,buffer.length)) != -1)
+                        fos.write(buffer,0,read);
+                    fos.close();
                 }
-                fos.close();
             }
-            zipEntry = zis.getNextEntry();
         }
-        zis.closeEntry();
-        zis.close();
+        return unzipFolder;
     }
 
-    private File newFile(File destinationDir, ZipEntry zipEntry) throws IOException {
-        System.out.println(toUTF_8(zipEntry.getName()));
-        File destFile = new File(destinationDir, zipEntry.getName());
-        String destDirPath = destinationDir.getCanonicalPath();
-        String destFilePath = destFile.getCanonicalPath();
-        if (!destFilePath.startsWith(destDirPath + File.separator)) {
-            throw new IOException("Entry is outside of the target dir: " + zipEntry.getName());
+    private String getInWrightEncoding(String str){
+        try {
+            return URLDecoder.decode(str, StandardCharsets.UTF_8.name());
+        } catch (UnsupportedEncodingException e) {
+            return "";
         }
-        return destFile;
     }
 
-    private String toUTF_8(String rawString) throws UnsupportedEncodingException {
-        byte ptext[] = rawString.getBytes("ISO-8859-1");
-        return new String(ptext, "UTF-8");
-
-    }
 
     public boolean deleteArchive(){
-        File toDelete = new File(OUTPUT_DIR + file.getName());
-        return toDelete.delete();
+        return deleteDirectory(unzipFolder);
+    }
+
+    private boolean deleteDirectory(File directoryToBeDeleted) {
+        File[] allContents = directoryToBeDeleted.listFiles();
+        if (allContents != null) {
+            for (File file : allContents) {
+                deleteDirectory(file);
+            }
+        }
+        return directoryToBeDeleted.delete();
     }
 
 }
