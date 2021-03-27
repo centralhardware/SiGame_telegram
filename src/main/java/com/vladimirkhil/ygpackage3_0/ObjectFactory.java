@@ -37,75 +37,75 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Package }
+     * Create an instance of {@link Pack }
      * 
      */
-    public Package createPackage() {
-        return new Package();
+    public Pack createPackage() {
+        return new Pack();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds }
+     * Create an instance of {@link Pack.Rounds }
      * 
      */
-    public Package.Rounds createPackageRounds() {
-        return new Package.Rounds();
+    public Pack.Rounds createPackageRounds() {
+        return new Pack.Rounds();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round }
+     * Create an instance of {@link Pack.Rounds.Round }
      * 
      */
-    public Package.Rounds.Round createPackageRoundsRound() {
-        return new Package.Rounds.Round();
+    public Pack.Rounds.Round createPackageRoundsRound() {
+        return new Pack.Rounds.Round();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round.Themes }
+     * Create an instance of {@link Pack.Rounds.Round.Themes }
      * 
      */
-    public Package.Rounds.Round.Themes createPackageRoundsRoundThemes() {
-        return new Package.Rounds.Round.Themes();
+    public Pack.Rounds.Round.Themes createPackageRoundsRoundThemes() {
+        return new Pack.Rounds.Round.Themes();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round.Themes.Theme }
+     * Create an instance of {@link Pack.Rounds.Round.Themes.Theme }
      * 
      */
-    public Package.Rounds.Round.Themes.Theme createPackageRoundsRoundThemesTheme() {
-        return new Package.Rounds.Round.Themes.Theme();
+    public Pack.Rounds.Round.Themes.Theme createPackageRoundsRoundThemesTheme() {
+        return new Pack.Rounds.Round.Themes.Theme();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round.Themes.Theme.Questions }
+     * Create an instance of {@link Pack.Rounds.Round.Themes.Theme.Questions }
      * 
      */
-    public Package.Rounds.Round.Themes.Theme.Questions createPackageRoundsRoundThemesThemeQuestions() {
-        return new Package.Rounds.Round.Themes.Theme.Questions();
+    public Pack.Rounds.Round.Themes.Theme.Questions createPackageRoundsRoundThemesThemeQuestions() {
+        return new Pack.Rounds.Round.Themes.Theme.Questions();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round.Themes.Theme.Questions.Question }
+     * Create an instance of {@link Pack.Rounds.Round.Themes.Theme.Questions.Question }
      * 
      */
-    public Package.Rounds.Round.Themes.Theme.Questions.Question createPackageRoundsRoundThemesThemeQuestionsQuestion() {
-        return new Package.Rounds.Round.Themes.Theme.Questions.Question();
+    public Pack.Rounds.Round.Themes.Theme.Questions.Question createPackageRoundsRoundThemesThemeQuestionsQuestion() {
+        return new Pack.Rounds.Round.Themes.Theme.Questions.Question();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round.Themes.Theme.Questions.Question.Scenario }
+     * Create an instance of {@link Pack.Rounds.Round.Themes.Theme.Questions.Question.Scenario }
      * 
      */
-    public Package.Rounds.Round.Themes.Theme.Questions.Question.Scenario createPackageRoundsRoundThemesThemeQuestionsQuestionScenario() {
-        return new Package.Rounds.Round.Themes.Theme.Questions.Question.Scenario();
+    public Pack.Rounds.Round.Themes.Theme.Questions.Question.Scenario createPackageRoundsRoundThemesThemeQuestionsQuestionScenario() {
+        return new Pack.Rounds.Round.Themes.Theme.Questions.Question.Scenario();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round.Themes.Theme.Questions.Question.Type }
+     * Create an instance of {@link Pack.Rounds.Round.Themes.Theme.Questions.Question.Type }
      * 
      */
-    public Package.Rounds.Round.Themes.Theme.Questions.Question.Type createPackageRoundsRoundThemesThemeQuestionsQuestionType() {
-        return new Package.Rounds.Round.Themes.Theme.Questions.Question.Type();
+    public Pack.Rounds.Round.Themes.Theme.Questions.Question.Type createPackageRoundsRoundThemesThemeQuestionsQuestionType() {
+        return new Pack.Rounds.Round.Themes.Theme.Questions.Question.Type();
     }
 
     /**
@@ -117,43 +117,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Package.Tags }
+     * Create an instance of {@link Pack.Tags }
      * 
      */
-    public Package.Tags createPackageTags() {
-        return new Package.Tags();
+    public Pack.Tags createPackageTags() {
+        return new Pack.Tags();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round.Themes.Theme.Questions.Question.Right }
+     * Create an instance of {@link Pack.Rounds.Round.Themes.Theme.Questions.Question.Right }
      * 
      */
-    public Package.Rounds.Round.Themes.Theme.Questions.Question.Right createPackageRoundsRoundThemesThemeQuestionsQuestionRight() {
-        return new Package.Rounds.Round.Themes.Theme.Questions.Question.Right();
+    public Pack.Rounds.Round.Themes.Theme.Questions.Question.Right createPackageRoundsRoundThemesThemeQuestionsQuestionRight() {
+        return new Pack.Rounds.Round.Themes.Theme.Questions.Question.Right();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round.Themes.Theme.Questions.Question.Wrong }
+     * Create an instance of {@link Pack.Rounds.Round.Themes.Theme.Questions.Question.Wrong }
      * 
      */
-    public Package.Rounds.Round.Themes.Theme.Questions.Question.Wrong createPackageRoundsRoundThemesThemeQuestionsQuestionWrong() {
-        return new Package.Rounds.Round.Themes.Theme.Questions.Question.Wrong();
+    public Pack.Rounds.Round.Themes.Theme.Questions.Question.Wrong createPackageRoundsRoundThemesThemeQuestionsQuestionWrong() {
+        return new Pack.Rounds.Round.Themes.Theme.Questions.Question.Wrong();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round.Themes.Theme.Questions.Question.Scenario.Atom }
+     * Create an instance of {@link Pack.Rounds.Round.Themes.Theme.Questions.Question.Scenario.Atom }
      * 
      */
-    public Package.Rounds.Round.Themes.Theme.Questions.Question.Scenario.Atom createPackageRoundsRoundThemesThemeQuestionsQuestionScenarioAtom() {
-        return new Package.Rounds.Round.Themes.Theme.Questions.Question.Scenario.Atom();
+    public Pack.Rounds.Round.Themes.Theme.Questions.Question.Scenario.Atom createPackageRoundsRoundThemesThemeQuestionsQuestionScenarioAtom() {
+        return new Pack.Rounds.Round.Themes.Theme.Questions.Question.Scenario.Atom();
     }
 
     /**
-     * Create an instance of {@link Package.Rounds.Round.Themes.Theme.Questions.Question.Type.Param }
+     * Create an instance of {@link Pack.Rounds.Round.Themes.Theme.Questions.Question.Type.Param }
      * 
      */
-    public Package.Rounds.Round.Themes.Theme.Questions.Question.Type.Param createPackageRoundsRoundThemesThemeQuestionsQuestionTypeParam() {
-        return new Package.Rounds.Round.Themes.Theme.Questions.Question.Type.Param();
+    public Pack.Rounds.Round.Themes.Theme.Questions.Question.Type.Param createPackageRoundsRoundThemesThemeQuestionsQuestionTypeParam() {
+        return new Pack.Rounds.Round.Themes.Theme.Questions.Question.Type.Param();
     }
 
     /**

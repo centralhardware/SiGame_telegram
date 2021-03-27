@@ -10,14 +10,8 @@ package com.vladimirkhil.ygpackage3_0;
 
 import java.util.ArrayList;
 import java.util.List;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlSchemaType;
-import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
+
+import jakarta.xml.bind.annotation.*;
 
 
 /**
@@ -212,14 +206,14 @@ import jakarta.xml.bind.annotation.XmlValue;
     "info",
     "rounds"
 })
-@XmlRootElement(name = "package")
-public class Package {
+@XmlRootElement(name = "package", namespace = "http://vladimirkhil.com/ygpackage3.0.xsd")
+public class Pack {
 
     protected Tags tags;
     @XmlElement(required = true)
     protected InfoType info;
     @XmlElement(required = true)
-    protected Package.Rounds rounds;
+    protected Pack.Rounds rounds;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "name", required = true)
@@ -869,7 +863,7 @@ public class Package {
             @XmlElement(required = true)
             protected InfoType info;
             @XmlElement(required = true)
-            protected Package.Rounds.Round.Themes themes;
+            protected Pack.Rounds.Round.Themes themes;
             @XmlAttribute(name = "name", required = true)
             protected String name;
             @XmlAttribute(name = "type", required = true)
@@ -1260,7 +1254,7 @@ public class Package {
                     @XmlElement(required = true)
                     protected InfoType info;
                     @XmlElement(required = true)
-                    protected Package.Rounds.Round.Themes.Theme.Questions questions;
+                    protected Pack.Rounds.Round.Themes.Theme.Questions questions;
                     @XmlAttribute(name = "name", required = true)
                     protected String name;
 
@@ -1584,13 +1578,13 @@ public class Package {
                             @XmlElement(required = true)
                             protected InfoType info;
                             @XmlElement(required = true)
-                            protected Package.Rounds.Round.Themes.Theme.Questions.Question.Type type;
+                            protected Pack.Rounds.Round.Themes.Theme.Questions.Question.Type type;
                             @XmlElement(required = true)
-                            protected Package.Rounds.Round.Themes.Theme.Questions.Question.Scenario scenario;
+                            protected Pack.Rounds.Round.Themes.Theme.Questions.Question.Scenario scenario;
                             @XmlElement(required = true)
-                            protected Package.Rounds.Round.Themes.Theme.Questions.Question.Right right;
+                            protected Pack.Rounds.Round.Themes.Theme.Questions.Question.Right right;
                             @XmlElement(required = true)
-                            protected Package.Rounds.Round.Themes.Theme.Questions.Question.Wrong wrong;
+                            protected Pack.Rounds.Round.Themes.Theme.Questions.Question.Wrong wrong;
                             @XmlAttribute(name = "price", required = true)
                             @XmlSchemaType(name = "unsignedInt")
                             protected long price;
