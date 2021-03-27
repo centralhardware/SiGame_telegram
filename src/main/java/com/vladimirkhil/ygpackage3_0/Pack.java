@@ -702,7 +702,7 @@ public class Pack {
          */
         public List<Round> getRound() {
             if (round == null) {
-                round = new ArrayList<Round>();
+                round = new ArrayList<>();
             }
             return this.round;
         }
@@ -1123,7 +1123,7 @@ public class Pack {
                  */
                 public List<Theme> getTheme() {
                     if (theme == null) {
-                        theme = new ArrayList<Theme>();
+                        theme = new ArrayList<>();
                     }
                     return this.theme;
                 }
@@ -1466,7 +1466,7 @@ public class Pack {
                          */
                         public List<Question> getQuestion() {
                             if (question == null) {
-                                question = new ArrayList<Question>();
+                                question = new ArrayList<>();
                             }
                             return this.question;
                         }
@@ -1778,7 +1778,7 @@ public class Pack {
                                  */
                                 public List<String> getAnswer() {
                                     if (answer == null) {
-                                        answer = new ArrayList<String>();
+                                        answer = new ArrayList<>();
                                     }
                                     return this.answer;
                                 }
@@ -1857,7 +1857,7 @@ public class Pack {
                                  */
                                 public List<Atom> getAtom() {
                                     if (atom == null) {
-                                        atom = new ArrayList<Atom>();
+                                        atom = new ArrayList<>();
                                     }
                                     return this.atom;
                                 }
@@ -2044,7 +2044,7 @@ public class Pack {
                                  */
                                 public List<Param> getParam() {
                                     if (param == null) {
-                                        param = new ArrayList<Param>();
+                                        param = new ArrayList<>();
                                     }
                                     return this.param;
                                 }
@@ -2206,7 +2206,7 @@ public class Pack {
                                  */
                                 public List<String> getAnswer() {
                                     if (answer == null) {
-                                        answer = new ArrayList<String>();
+                                        answer = new ArrayList<>();
                                     }
                                     return this.answer;
                                 }
@@ -2277,7 +2277,7 @@ public class Pack {
          */
         public List<String> getTag() {
             if (tag == null) {
-                tag = new ArrayList<String>();
+                tag = new ArrayList<>();
             }
             return this.tag;
         }

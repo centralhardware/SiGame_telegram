@@ -223,7 +223,7 @@ public class InfoType {
          */
         public List<String> getAuthor() {
             if (author == null) {
-                author = new ArrayList<String>();
+                author = new ArrayList<>();
             }
             return this.author;
         }
@@ -282,7 +282,7 @@ public class InfoType {
          */
         public List<String> getSource() {
             if (source == null) {
-                source = new ArrayList<String>();
+                source = new ArrayList<>();
             }
             return this.source;
         }

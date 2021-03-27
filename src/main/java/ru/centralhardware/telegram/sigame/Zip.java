@@ -27,7 +27,7 @@ public class Zip {
         FileOutputStream fos;
         try (
                 FileInputStream fis = new FileInputStream(zip);
-                ZipArchiveInputStream zis = new ZipArchiveInputStream(fis);
+                ZipArchiveInputStream zis = new ZipArchiveInputStream(fis)
         ){
             byte[] buffer = new byte[8192];
             ArchiveEntry entry;

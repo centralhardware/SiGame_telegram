@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 
 public class ParsePackXml {
 
-    private File packXml;
+    private final File packXml;
 
     public ParsePackXml(File pack){
         if (!pack.exists() || !pack.isFile() || !pack.getName().equals("content.xml")){
