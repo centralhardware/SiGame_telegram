@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.io.File;
 
+@SuppressWarnings("ConstantConditions")
 public class ParsePackXmlTest {
 
     @Test

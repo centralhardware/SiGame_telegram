@@ -13,18 +13,17 @@ public class ParsePackXml {
 
     private final File packXml;
 
-    public ParsePackXml(File pack){
-        if (!pack.exists() || !pack.isFile() || !pack.getName().equals("content.xml")){
+    public ParsePackXml(File contentXml){
+        if (!contentXml.exists() || !contentXml.isFile() || !contentXml.getName().equals("contentXml.xml")){
             throw new IllegalArgumentException();
         }
-        this.packXml = pack;
+        this.packXml = contentXml;
     }
 
     public Pack unmarshal() throws JAXBException {
         JAXBContext context = JAXBContext.newInstance("com.vladimirkhil.ygpackage3_0");
         Unmarshaller unmarshaller = context.createUnmarshaller();
         try {
-            var test = (Pack) unmarshaller.unmarshal(new FileInputStream(packXml));
             return  (Pack) unmarshaller.unmarshal(new FileInputStream(packXml));
         } catch (FileNotFoundException ignored) { }
         return null;
