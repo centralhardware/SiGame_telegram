@@ -14,7 +14,7 @@ public class ParsePackXml {
     private final File packXml;
 
     public ParsePackXml(File contentXml){
-        if (!contentXml.exists() || !contentXml.isFile() || !contentXml.getName().equals("contentXml.xml")){
+        if (!contentXml.exists() || !contentXml.isFile() || !contentXml.getName().equals("content.xml")){
             throw new IllegalArgumentException();
         }
         this.packXml = contentXml;
